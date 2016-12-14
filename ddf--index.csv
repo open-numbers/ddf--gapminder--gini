@@ -2,5 +2,5 @@ key,value,file
 concept,name,ddf--concepts.csv
 concept,concept_type,ddf--concepts.csv
 concept,indicator_url,ddf--concepts.csv
-"geo,time",gini,ddf--datapoints--gini--by--geo--time.csv
+"geo,time",inequality_index_gini,ddf--datapoints--gini--by--geo--time.csv
 geo,name,ddf--entities--geo.csv

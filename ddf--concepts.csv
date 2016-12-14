@@ -1,6 +1,6 @@
 concept,name,concept_type,indicator_url
 name,Name,string,
 time,Time,time,
-gini,Gini coefficient,measure,https://github.com/open-numbers/ddf--gapminder--gini
+inequality_index_gini,Gini coefficient,measure,https://github.com/open-numbers/ddf--gapminder--gini
 geo,Country,entity_domain,
 indicator_url,Indicator URL,string,
