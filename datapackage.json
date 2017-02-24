@@ -1,0 +1,65 @@
+{
+    "name": "ddf--gapminder--gini",
+    "language": {
+        "id": "en"
+    },
+    "resources": [
+        {
+            "path": "ddf--concepts.csv",
+            "name": "ddf--concepts",
+            "schema": {
+                "primaryKey": "concept",
+                "fields": [
+                    {
+                        "name": "concept"
+                    },
+                    {
+                        "name": "name"
+                    },
+                    {
+                        "name": "concept_type"
+                    },
+                    {
+                        "name": "indicator_url"
+                    }
+                ]
+            }
+        },
+        {
+            "path": "ddf--datapoints--gapminder_gini--by--geo--time.csv",
+            "name": "ddf--datapoints--gapminder_gini--by--geo--time",
+            "schema": {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "gapminder_gini"
+                    }
+                ]
+            }
+        },
+        {
+            "path": "ddf--entities--geo.csv",
+            "name": "ddf--entities--geo",
+            "schema": {
+                "primaryKey": "geo",
+                "fields": [
+                    {
+                        "name": "name"
+                    },
+                    {
+                        "name": "geo"
+                    }
+                ]
+            }
+        }
+    ]
+}
