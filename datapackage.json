@@ -3,12 +3,12 @@
     "language": {
         "id": "en"
     },
+    "created": "2018-05-13T03:22:28.011989+00:00",
     "resources": [
         {
             "path": "ddf--concepts.csv",
             "name": "ddf--concepts",
             "schema": {
-                "primaryKey": "concept",
                 "fields": [
                     {
                         "name": "concept"
@@ -22,17 +22,14 @@
                     {
                         "name": "indicator_url"
                     }
-                ]
+                ],
+                "primaryKey": "concept"
             }
         },
         {
             "path": "ddf--datapoints--gapminder_gini--by--geo--time.csv",
             "name": "ddf--datapoints--gapminder_gini--by--geo--time",
             "schema": {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
                 "fields": [
                     {
                         "name": "geo"
@@ -43,6 +40,10 @@
                     {
                         "name": "gapminder_gini"
                     }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
                 ]
             }
         },
@@ -50,7 +51,6 @@
             "path": "ddf--entities--geo.csv",
             "name": "ddf--entities--geo",
             "schema": {
-                "primaryKey": "geo",
                 "fields": [
                     {
                         "name": "name"
@@ -58,8 +58,63 @@
                     {
                         "name": "geo"
                     }
-                ]
+                ],
+                "primaryKey": "geo"
             }
         }
-    ]
+    ],
+    "ddfSchema": {
+        "concepts": [
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "concept_type",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "indicator_url",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            }
+        ],
+        "entities": [
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            }
+        ],
+        "datapoints": [
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "gapminder_gini",
+                "resources": [
+                    "ddf--datapoints--gapminder_gini--by--geo--time"
+                ]
+            }
+        ]
+    }
 }
