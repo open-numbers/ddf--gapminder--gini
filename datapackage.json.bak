@@ -3,7 +3,7 @@
     "language": {
         "id": "en"
     },
-    "created": "2018-12-25T07:39:55.159921+00:00",
+    "created": "2018-05-13T03:22:28.011989+00:00",
     "resources": [
         {
             "path": "ddf--concepts.csv",
@@ -18,14 +18,17 @@
                     },
                     {
                         "name": "concept_type"
+                    },
+                    {
+                        "name": "indicator_url"
                     }
                 ],
                 "primaryKey": "concept"
             }
         },
         {
-            "path": "ddf--datapoints--gini--by--geo--time.csv",
-            "name": "ddf--datapoints--gini--by--geo--time",
+            "path": "ddf--datapoints--gapminder_gini--by--geo--time.csv",
+            "name": "ddf--datapoints--gapminder_gini--by--geo--time",
             "schema": {
                 "fields": [
                     {
@@ -35,7 +38,7 @@
                         "name": "time"
                     },
                     {
-                        "name": "gini"
+                        "name": "gapminder_gini"
                     }
                 ],
                 "primaryKey": [
@@ -50,10 +53,10 @@
             "schema": {
                 "fields": [
                     {
-                        "name": "geo"
+                        "name": "name"
                     },
                     {
-                        "name": "name"
+                        "name": "geo"
                     }
                 ],
                 "primaryKey": "geo"
@@ -67,6 +70,15 @@
                     "concept"
                 ],
                 "value": "concept_type",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "indicator_url",
                 "resources": [
                     "ddf--concepts"
                 ]
@@ -98,12 +110,11 @@
                     "geo",
                     "time"
                 ],
-                "value": "gini",
+                "value": "gapminder_gini",
                 "resources": [
-                    "ddf--datapoints--gini--by--geo--time"
+                    "ddf--datapoints--gapminder_gini--by--geo--time"
                 ]
             }
-        ],
-        "synonyms": []
+        ]
     }
 }

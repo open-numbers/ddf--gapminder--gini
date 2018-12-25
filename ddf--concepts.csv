@@ -1,6 +1,5 @@
-concept,name,concept_type,indicator_url
-name,Name,string,
-time,Time,time,
-gapminder_gini,Gapminder gini,measure,https://github.com/open-numbers/ddf--gapminder--gini
-geo,Country,entity_domain,
-indicator_url,Indicator URL,string,
+concept,name,concept_type
+gini,Gini,measure
+geo,Geo,entity_domain
+time,Time,time
+name,name,string
