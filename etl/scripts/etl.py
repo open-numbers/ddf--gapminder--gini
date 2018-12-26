@@ -12,6 +12,8 @@ SHEET = 'data-for-countries-etc-by-year'
 DIMENSIONS = ['geo', 'time']
 OUT_DIR = '../../'
 
+COLUMN_TO_CONCEPT = {'Gini': 'gapminder_gini'}
+
 
 def gen_datapoints(df_: pd.DataFrame):
     df = df_.copy()
@@ -31,7 +33,7 @@ def main():
     measures = list()
 
     for c, df in gen_datapoints(data):
-        c_id = to_concept_id(c)
+        c_id = COLUMN_TO_CONCEPT[c]
         df.columns = [c_id]
         serve_datapoint(df, OUT_DIR, c_id)
 

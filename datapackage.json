@@ -3,7 +3,7 @@
     "language": {
         "id": "en"
     },
-    "created": "2018-12-25T13:23:24.611809+00:00",
+    "created": "2018-12-26T16:14:02.213208+00:00",
     "resources": [
         {
             "path": "ddf--concepts.csv",
@@ -24,8 +24,8 @@
             }
         },
         {
-            "path": "ddf--datapoints--gini--by--geo--time.csv",
-            "name": "ddf--datapoints--gini--by--geo--time",
+            "path": "ddf--datapoints--gapminder_gini--by--geo--time.csv",
+            "name": "ddf--datapoints--gapminder_gini--by--geo--time",
             "schema": {
                 "fields": [
                     {
@@ -35,7 +35,7 @@
                         "name": "time"
                     },
                     {
-                        "name": "gini"
+                        "name": "gapminder_gini"
                     }
                 ],
                 "primaryKey": [
@@ -98,9 +98,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "gini",
+                "value": "gapminder_gini",
                 "resources": [
-                    "ddf--datapoints--gini--by--geo--time"
+                    "ddf--datapoints--gapminder_gini--by--geo--time"
                 ]
             }
         ],
