@@ -3,11 +3,15 @@
     "language": {
         "id": "en"
     },
-    "created": "2018-12-26T16:14:02.213208+00:00",
+    "title": "ddf--gapminder--gini",
+    "description": "",
+    "author": "",
+    "license": "",
+    "created": "2020-04-29T02:03:38.662007+00:00",
     "resources": [
         {
-            "path": "ddf--concepts.csv",
             "name": "ddf--concepts",
+            "path": "ddf--concepts.csv",
             "schema": {
                 "fields": [
                     {
@@ -24,8 +28,8 @@
             }
         },
         {
-            "path": "ddf--datapoints--gapminder_gini--by--geo--time.csv",
             "name": "ddf--datapoints--gapminder_gini--by--geo--time",
+            "path": "ddf--datapoints--gapminder_gini--by--geo--time.csv",
             "schema": {
                 "fields": [
                     {
@@ -45,8 +49,8 @@
             }
         },
         {
-            "path": "ddf--entities--geo.csv",
             "name": "ddf--entities--geo",
+            "path": "ddf--entities--geo.csv",
             "schema": {
                 "fields": [
                     {

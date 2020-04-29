@@ -3,10 +3,11 @@
 import os.path as osp
 import pandas as pd
 
-from ddf_utils.io import open_google_spreadsheet, serve_datapoint
+from ddf_utils.io import open_google_spreadsheet, serve_datapoint, dump_json
 from ddf_utils.str import to_concept_id
+from ddf_utils.package import get_datapackage
 
-DOCID = '1nbz34ZQFD7qmA_V-80dCpNgdczhaYMj9WW5S6Yo1TWI'
+DOCID = '1hhTERVDWDyZh-efUPtMrcdUYWzXBlIbrOIhZwegXSi8'
 SHEET = 'data-for-countries-etc-by-year'
 
 DIMENSIONS = ['geo', 'time']
@@ -58,6 +59,9 @@ def main():
     geo_df = create_geo_domain(data)
     geo_df.to_csv(osp.join(OUT_DIR, 'ddf--entities--geo.csv'), index=False)
 
+    
+    # datapackage
+    dump_json(osp.join(OUT_DIR, 'datapackage.json'), get_datapackage(OUT_DIR, update=True))
 
 if __name__ == '__main__':
     main()
