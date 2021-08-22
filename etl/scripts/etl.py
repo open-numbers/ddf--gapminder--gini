@@ -29,7 +29,7 @@ def create_geo_domain(df: pd.DataFrame) -> pd.DataFrame:
 
 def main():
     print('running etl...')
-    data = pd.read_excel(open_google_spreadsheet(DOCID), sheet_name=SHEET)
+    data = pd.read_excel(open_google_spreadsheet(DOCID), sheet_name=SHEET, dtype={'time': int})
 
     measures = list()
 
@@ -59,7 +59,6 @@ def main():
     geo_df = create_geo_domain(data)
     geo_df.to_csv(osp.join(OUT_DIR, 'ddf--entities--geo.csv'), index=False)
 
-    
     # datapackage
     dump_json(osp.join(OUT_DIR, 'datapackage.json'), get_datapackage(OUT_DIR, update=True))
 
