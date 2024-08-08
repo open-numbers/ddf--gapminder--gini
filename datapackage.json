@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2020-04-29T02:03:38.662007+00:00",
+    "created": "2024-08-08T07:22:55.882406+00:00",
     "resources": [
         {
             "name": "ddf--concepts",
@@ -24,7 +24,9 @@
                         "name": "concept_type"
                     }
                 ],
-                "primaryKey": "concept"
+                "primaryKey": [
+                    "concept"
+                ]
             }
         },
         {
@@ -60,7 +62,9 @@
                         "name": "name"
                     }
                 ],
-                "primaryKey": "geo"
+                "primaryKey": [
+                    "geo"
+                ]
             }
         }
     ],
